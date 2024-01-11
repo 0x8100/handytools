@@ -2,8 +2,9 @@
 
 # /etc/rc.d/glances (Web server mode) script for OpenBSD.
 
-# https://github.com/0x8100/handytools/
-# If necessary, view the LICENSE file at the top of the repository.
+# This file is licensed under WTFPL Version 2
+# See the LICENSE file for more details:
+# https://github.com/0x8100/handytools/blob/main/LICENSE
 
 daemon="/usr/local/bin/glances"
 daemon_flags="-w -B 127.0.0.1 -p 8080"
