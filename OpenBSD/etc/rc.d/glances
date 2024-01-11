@@ -26,4 +26,3 @@ rc_stop() {
 rc_reload=NO
 
 rc_cmd $1
-n
