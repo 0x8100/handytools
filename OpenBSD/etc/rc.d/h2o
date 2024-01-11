@@ -1,7 +1,8 @@
 #!/bin/ksh
 
+# /etc/rc.d/h2o script for OpenBSD
 
-# /etc/rc.d/h2o script for OpenBSD.
+# https://github.com/0x8100/handytools/
 # If necessary, view the LICENSE file at the top of the repository.
 
 daemon="/usr/local/bin/h2o"
