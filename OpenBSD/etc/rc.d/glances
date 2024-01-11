@@ -1,0 +1,27 @@
+#!/bin/ksh
+
+# /etc/rc.d/glances (Web server mode) script for OpenBSD.
+# If necessary, view the LICENSE file at the top of the repository.
+
+daemon="/usr/local/bin/glances"
+daemon_flags="-w -B 127.0.0.1 -p 8080"
+daemon_user="nobody"
+
+. /etc/rc.d/rc.subr
+
+rc_start() {
+        rc_exec "${daemon} ${daemon_flags}" &
+}
+
+rc_check() {
+        pgrep -f "python.* ${pexp}$"
+}
+
+rc_stop() {
+        pkill -f "python.* ${pexp}$"
+}
+
+rc_reload=NO
+
+rc_cmd $1
+n

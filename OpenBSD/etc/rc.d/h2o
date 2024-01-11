@@ -1,0 +1,33 @@
+#!/bin/ksh
+
+
+# /etc/rc.d/h2o script for OpenBSD.
+# If necessary, view the LICENSE file at the top of the repository.
+
+daemon="/usr/local/bin/h2o"
+daemon_flags="-m master"
+pid="$(cat /var/h2o/run/h2o.pid 2> /dev/null)"
+
+. /etc/rc.d/rc.subr
+
+rc_start() {
+        rc_exec "${daemon} ${daemon_flags}" &
+}
+
+rc_reload() {
+        rc_exec "[ $pid ] && kill -HUP $pid"
+}
+
+rc_stop() {
+        rc_exec "[ $pid ] && kill $pid"
+}
+
+rc_configtest() {
+        rc_exec "${daemon} -m test"
+}
+
+rc_check() {
+        rc_exec "[ $pid ] && ps $pid > /dev/null"
+}
+
+rc_cmd $1
