@@ -2,8 +2,9 @@
 
 # /etc/rc.d/h2o script for OpenBSD
 
-# https://github.com/0x8100/handytools/
-# If necessary, view the LICENSE file at the top of the repository.
+# This file is licensed under WTFPL Version 2
+# See the LICENSE file for more details:
+# https://github.com/0x8100/handytools/blob/main/LICENSE
 
 daemon="/usr/local/bin/h2o"
 daemon_flags="-m master"

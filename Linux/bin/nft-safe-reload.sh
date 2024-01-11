@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 # Safely loads nftable rulesets
-# Based on a script written by Sanjuro E https://sanjuroe.dev/nft-safe-reload
+# Based on a script written by Sanjuro E.
+
+### LICENSE WARNING #######################################
+# This file has a reference source, so the contents of
+# the LICENSE file (at the top of the repository) are
+# **NOT** applied.
+# https://sanjuroe.dev/nft-safe-reload
+###########################################################
 
 #
 # Default variables
