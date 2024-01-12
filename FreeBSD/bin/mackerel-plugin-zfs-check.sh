@@ -6,9 +6,9 @@
 #
 # LICENSE
 #
+# Copyright (C) 2023 0x8100 https://github.com/0x8100
 # This file is licensed under WTFPL Version 2
-# See the LICENSE file for more details:
-# https://github.com/0x8100/handytools/blob/main/LICENSE
+# See http://www.wtfpl.net/ for more details.
 #
 # USAGE
 #
