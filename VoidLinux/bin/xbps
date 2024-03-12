@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+if [ "`whoami`" != "root" ]; then
+    exec sudo "$0" "$@" 
+fi
+
+if [ $# -lt 1 ]; then
+    echo "At least one verb required. aborting"
+    exit 1
+fi
+
+case "$1" in
+"search")
+    VERB="query"; shift
+    NOUN="-Rs $@"
+    ;;
+*)
+    VERB="$1"; shift
+    NOUN="$@"
+    ;;
+esac
+
+if ! which xbps-"$VERB" >/dev/null 2>&1; then 
+    echo "$VERB is not a valid verb"
+    exit 1
+fi
+
+exec xbps-$VERB $NOUN
