@@ -2,4 +2,6 @@
 Some small tools and scripts with a very permissive license that may be useful to someone.
 
 ## License
-This repository is licensed under WTFPL version 2, except for the contents of the "3rdparty" subdirectory.
+Contents are licensed under WTFPL version 2, unless individual files have a different author and license.
+
+Files explicitly under other licenses are located under the "3rdparty" directory.
