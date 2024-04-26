@@ -33,7 +33,7 @@ table ip6 filter {
 		tcp dport @dPort_Accept counter accept
 		ip6 hoplimit 1 udp dport 33434-33529 counter accept comment "Accept Inbound UDP traceroute"
 		ip6 hoplimit 1 icmpv6 type echo-request counter accept comment "Accept Inbound ICMP traceroute"
-		icmpv6 counter accept comment "Accept Inbound ICMPv6"
+		meta l4proto icmpv6 counter accept comment "Accept Inbound ICMPv6"
 		ct state related,established counter accept
 		counter drop
 	}
@@ -73,7 +73,7 @@ table ip filter {
 		tcp dport @dPort_Accept counter accept
 		ip ttl 1 udp dport 33434-33529 counter accept comment "Accept Inbound UDP traceroute"
 		ip ttl 1 icmp type echo-request counter accept comment "Accept Inbound ICMP traceroute"
-		icmp counter accept comment "Accept Inbound ICMP"
+		meta l4proto icmp counter accept comment "Accept Inbound ICMP"
 		ct state related,established counter accept
 		counter drop
 	}
