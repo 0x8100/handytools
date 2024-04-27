@@ -16,6 +16,10 @@ case "$1" in
     VERB="query"; shift
     NOUN="-Rs $@"
     ;;
+"autoremove")
+    VERB="remove"; shift
+    NOUN="-o $@"
+    ;;
 *)
     VERB="$1"; shift
     NOUN="$@"
