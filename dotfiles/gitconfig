@@ -12,3 +12,6 @@
 	decorate = auto
 [alias]
 	unstage = reset HEAD
+[init]
+	# "master" in this case is the antonym of copy, not slave.
+        defaultBranch = master
