@@ -1,0 +1,14 @@
+[core]
+	autocrlf = input
+	eol = lf
+[push]
+	default = current
+	autoSetupRemote = true
+[pull]
+	ff = only
+[merge]
+	ff = false
+[log]
+	decorate = auto
+[alias]
+	unstage = reset HEAD
