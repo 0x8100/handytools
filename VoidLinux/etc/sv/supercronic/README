@@ -1,0 +1,4 @@
+Supercronic is a concise job runner which can interpret crontab,
+doesn't rely on mail, and can output logs to stdout.
+
+For more details, see https://github.com/aptible/supercronic
