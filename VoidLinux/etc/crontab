@@ -1,0 +1,4 @@
+@hourly		/usr/sbin/run-parts --report /etc/cron.hourly
+@daily		/usr/sbin/run-parts --report /etc/cron.daily
+@weekly		/usr/sbin/run-parts --report /etc/cron.weekly
+@monthly	/usr/sbin/run-parts --report /etc/cron.monthly
