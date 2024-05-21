@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+set -eux
+
 SUPERCRONIC_URL="https://github.com/aptible/supercronic/releases/download/v0.2.29/supercronic-linux-amd64"
 
-if [[ `whoami` != root ]; then
+if [[ `whoami` != root ]]; then
     echo "Please run as root. aborting" > /dev/stderr
     exit 1
 fi
@@ -19,13 +21,18 @@ tmpfile=$(mktemp)
 trap rm_tmpfile EXIT
 trap 'trap - EXIT; rm_tmpfile; exit -1' INT PIPE TERM
 
+# Downlaod supercronic
 wget -O $tmpfile $SUPERCRONIC_URL
-
 install -m 0755 -o root -g root $tmpfile /usr/local/bin/supercronic
-install -m 0755 -o root -g root ../crontab /etc/crontab
 
+# Install default crontab and periodic script directories
+install -m 0755 -o root -g root ../../crontab /etc/crontab
 for n in hourly daily weekly monthly; do
     install -m 0755 -o root -g root -d /etc/cron.$n
 done
 
-install . -m 0755 -o root -g root /etc/sv/supercronic
+# Install service
+cp -r . /etc/sv/supercronic
+
+echo 'Supercronic installation complete.'
+echo 'To enable, type `sudo ln -s /etc/sv/supercronic /var/sv/supercronic`'
