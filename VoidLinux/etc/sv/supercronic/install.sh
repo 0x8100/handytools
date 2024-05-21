@@ -35,4 +35,4 @@ done
 cp -r . /etc/sv/supercronic
 
 echo 'Supercronic installation complete.'
-echo 'To enable, type `sudo ln -s /etc/sv/supercronic /var/sv/supercronic`'
+echo 'To enable, type `sudo ln -s /etc/sv/supercronic /var/service/supercronic`'
