@@ -4,12 +4,6 @@
 #   Get the temperature inside the server using ipmitool,
 #   and then sends it to Mackerel as custom metric item.
 #
-# LICENSE
-#
-# Copyright (C) 2023 0x8100 https://github.com/0x8100
-# This file is licensed under WTFPL Version 2
-# See http://www.wtfpl.net/ for more details.
-#
 # NOTES
 # 
 # * The script requires ipmitool and gawk

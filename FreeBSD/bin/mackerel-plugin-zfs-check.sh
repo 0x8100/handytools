@@ -4,12 +4,6 @@
 #   Checks the status of the pool specified in the script,
 #   and sends it to Mackerel as a custom check item
 #
-# LICENSE
-#
-# Copyright (C) 2023 0x8100 https://github.com/0x8100
-# This file is licensed under WTFPL Version 2
-# See http://www.wtfpl.net/ for more details.
-#
 # USAGE
 #
 # Place this script into /usr/local/bin/mackerel-plugin-zfs-check.sh,
