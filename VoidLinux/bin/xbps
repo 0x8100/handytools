@@ -20,6 +20,10 @@ case "$1" in
     VERB="remove"; shift
     NOUN="-o $@"
     ;;
+"upgrade")
+    VERB="install"; shift
+    NOUN="-Su $@"
+    ;;
 *)
     VERB="$1"; shift
     NOUN="$@"
