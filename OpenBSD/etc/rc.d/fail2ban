@@ -1,0 +1,26 @@
+#!/bin/ksh
+
+daemon="/usr/local/bin/fail2ban-client"
+daemon_flags=""
+daemon_user="root"
+daemon_group="daemon"
+
+. /etc/rc.d/rc.subr
+
+rc_start() {
+	rc_exec "${daemon} ${daemon_flags} start"
+}
+
+rc_reload() {
+	rc_exec "${daemon} ${daemon_flags} reload"
+}
+
+rc_stop() {
+	rc_exec "${daemon} ${daemon_flags} stop"
+}
+
+rc_check() {
+	rc_exec "${daemon} ${daemon_flags} status > /dev/null"
+}
+
+rc_cmd $1
