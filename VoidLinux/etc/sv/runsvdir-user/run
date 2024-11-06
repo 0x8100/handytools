@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export UESR="user"
+export USER="user"
 export HOME="/home/$USER"
 
 groups="$(id -Gn "$USER" | tr ' ' ':')"
