@@ -2,4 +2,4 @@
 exec 2>&1
 [ -r conf ] && . ./conf
 
-exec /usr/local/bin/supercronic $OPTS ${CRONTAB:=/etc/crontab}
+exec /usr/local/bin/supercronic -inotify $OPTS ${CRONTAB:=/etc/crontab}
