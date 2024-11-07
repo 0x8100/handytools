@@ -2,7 +2,7 @@
 
 set -eu
 
-SUPERCRONIC_URL="https://github.com/aptible/supercronic/releases/download/v0.2.29/supercronic-linux-amd64"
+SUPERCRONIC_URL="https://github.com/aptible/supercronic/releases/download/v0.2.33/supercronic-linux-amd64"
 
 if [[ `whoami` != root ]]; then
     echo "Please run as root. aborting" > /dev/stderr
