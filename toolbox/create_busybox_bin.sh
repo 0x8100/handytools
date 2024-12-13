@@ -4,7 +4,6 @@ set -eu
 
 BUSYBOX="/usr/bin/busybox.static"
 PREFIX="/static"
-WD="`pwd`"
 
 # require root privilege
 if [ $(id -r -u) != 0 ]; then
@@ -20,10 +19,7 @@ fi
 
 
 mkdir $PREFIX
-cd $PREFIX
-
-cp $BUSYBOX ./busybox.static
-for i in `./busybox.static --list`; do ln busybox.static ${i}; done
+cp $BUSYBOX ${PREFIX}/busybox.static
+for i in `${PREFIX}/busybox.static --list`; do ln ${PREFIX}/busybox.static ${PREFIX}/${i}; done
 
 echo "busybox-static shell environment has installed into $PREFIX ."
-cd "$WD"
