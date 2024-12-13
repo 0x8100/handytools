@@ -11,15 +11,16 @@ if [ $(id -r -u) != 0 ]; then
     exit 1
 fi
 
-
 if [ ! -e "$BUSYBOX" ]; then
     echo "Please install busybox-static into $BUSYBOX . aborted" > /dev/stderr
     exit 1
 fi
 
-
 mkdir $PREFIX
 cp $BUSYBOX ${PREFIX}/busybox.static
-for i in `${PREFIX}/busybox.static --list`; do ln ${PREFIX}/busybox.static ${PREFIX}/${i}; done
+
+for i in `${PREFIX}/busybox.static --list`; do
+    ln ${PREFIX}/busybox.static ${PREFIX}/${i}
+done
 
 echo "busybox-static shell environment has installed into $PREFIX ."
