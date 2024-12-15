@@ -26,10 +26,12 @@ curl -o $tmpfile $SUPERCRONIC_URL
 install -m 0755 -o root -g root $tmpfile /usr/local/bin/supercronic
 
 # Install default crontab and periodic script directories
-install -m 0755 -o root -g root ../../crontab /etc/crontab
-for n in hourly daily weekly monthly; do
-    install -m 0755 -o root -g root -d /etc/cron.$n
-done
+if [ ! -e /etc/crontab ]; then
+    install -m 0755 -o root -g root ../../crontab /etc/crontab
+    for n in hourly daily weekly monthly; do
+        install -m 0755 -o root -g root -d /etc/cron.$n
+    done
+fi
 
 # Install service
 cp -r . /etc/sv/supercronic
