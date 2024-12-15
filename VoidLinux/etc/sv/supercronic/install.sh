@@ -9,8 +9,8 @@ if [[ `whoami` != root ]]; then
     exit 1
 fi
 
-if ! which wget >& /dev/null; then
-    echo "wget command not found. aborting" > /dev/stderr
+if ! which curl >& /dev/null; then
+    echo "curl command not found. aborting" > /dev/stderr
     exit 2
 fi
 
@@ -22,7 +22,7 @@ trap rm_tmpfile EXIT
 trap 'trap - EXIT; rm_tmpfile; exit -1' INT PIPE TERM
 
 # Downlaod supercronic
-wget -O $tmpfile $SUPERCRONIC_URL
+curl -o $tmpfile $SUPERCRONIC_URL
 install -m 0755 -o root -g root $tmpfile /usr/local/bin/supercronic
 
 # Install default crontab and periodic script directories
