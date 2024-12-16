@@ -25,4 +25,3 @@ create_symlink lbzip2 bunzip2
 create_symlink pigz gunzip
 create_symlink pigz gzip
 create_symlink pigz zcat
-create_symlink zcat pigz
