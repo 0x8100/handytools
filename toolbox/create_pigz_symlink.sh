@@ -11,8 +11,8 @@ fi
 #   --> ln -s /usr/bin/$alternative_bin /usr/local/bin/$std_bin
 function create_symlink() {
     if [ -x /usr/bin/$1 ]; then
-        echo "create symlink /usr/bin/$1 --> /usr/local/bin/$2"
-        ln -s /usr/bin/$1 /usr/local/bin/$2
+        [ -e /usr/local/bin/$2 ] && rm /usr/local/bin/$2
+        ln -sv /usr/bin/$1 /usr/local/bin/$2
     fi
 }
 
