@@ -27,7 +27,7 @@ install -m 0755 -o root -g root $tmpfile /usr/local/bin/supercronic
 
 # Install default crontab and periodic script directories
 if [ ! -e /etc/crontab ]; then
-    install -m 0755 -o root -g root ../../crontab /etc/crontab
+    install -m 0644 -o root -g root ../../crontab /etc/crontab
     for n in hourly daily weekly monthly; do
         install -m 0755 -o root -g root -d /etc/cron.$n
     done
