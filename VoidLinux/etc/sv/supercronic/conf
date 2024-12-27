@@ -1,0 +1,2 @@
+# example of additional flags
+OPTS="-quiet -passthrough-logs"
