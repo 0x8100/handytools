@@ -19,14 +19,12 @@ cleanup() {
 }
 trap cleanup EXIT
 
+# Install service
 curl -sL 'https://github.com/mackerelio/mackerel-agent/releases/latest/download/mackerel-agent_linux_amd64.tar.gz' | tar -zx -f - -C "$TMPDIR/" mackerel-agent_linux_amd64/mackerel-agent{,.conf}
 install -o root -g root -m 0755 -D "$TMPDIR/mackerel-agent_linux_amd64/mackerel-agent" \
 	/usr/local/sbin/mackerel-agent
 install -o root -g root -m 0644 -D "$TMPDIR/mackerel-agent_linux_amd64/mackerel-agent.conf" \
 	/etc/mackerel-agent/mackerel-agent.conf
-cp -r . /etc/sv/mackerel-agent
-
-# Install service
 cp -r . /etc/sv/mackerel-agent
 
 echo 'mackerel-agent installation complete.'
