@@ -34,7 +34,8 @@ if [ ! -e /etc/crontab ]; then
 fi
 
 # Install service
-cp -r . /etc/sv/supercronic
+cp -r "$(dirname "$(readlink -f "$BASH_SOURCE")")" /etc/sv/supercronic
 
 echo 'Supercronic installation complete.'
 echo 'To enable, type `sudo ln -s /etc/sv/supercronic /var/service/supercronic`'
+

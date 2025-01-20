@@ -2,6 +2,8 @@
 
 set -eu
 
+MACKEREL_AGENT_URL='https://github.com/mackerelio/mackerel-agent/releases/latest/download/mackerel-agent_linux_amd64.tar.gz'
+
 if [[ `whoami` != root ]]; then
     echo "Please run as root. aborting" > /dev/stderr
     exit 1
@@ -12,20 +14,20 @@ if ! which curl >& /dev/null; then
     exit 2
 fi
 
-# creates working directory
-TMPDIR=$(mktemp -d)
+# Create working directory
+TMP_DIR=$(mktemp -d)
 cleanup() {
-    rm -rf "$TMPDIR"
+    rm -rf "$TMP_DIR"
 }
 trap cleanup EXIT
 
 # Install service
-curl -sL 'https://github.com/mackerelio/mackerel-agent/releases/latest/download/mackerel-agent_linux_amd64.tar.gz' | tar -zx -f - -C "$TMPDIR/" mackerel-agent_linux_amd64/mackerel-agent{,.conf}
-install -o root -g root -m 0755 -D "$TMPDIR/mackerel-agent_linux_amd64/mackerel-agent" \
+curl -sL "$MACKEREL_AGENT_URL" | tar -zx -f - -C "$TMP_DIR/" mackerel-agent_linux_amd64/mackerel-agent{,.conf}
+install -o root -g root -m 0755 -D "$TMP_DIR/mackerel-agent_linux_amd64/mackerel-agent" \
 	/usr/local/sbin/mackerel-agent
-install -o root -g root -m 0644 -D "$TMPDIR/mackerel-agent_linux_amd64/mackerel-agent.conf" \
+install -o root -g root -m 0644 -D "$TMP_DIR/mackerel-agent_linux_amd64/mackerel-agent.conf" \
 	/etc/mackerel-agent/mackerel-agent.conf
-cp -r . /etc/sv/mackerel-agent
+cp -r "$(dirname "$(readlink -f "$BASH_SOURCE")")" /etc/sv/mackerel-agent
 
 echo 'mackerel-agent installation complete.'
 echo 'To enable, type `sudo ln -s /etc/sv/mackerel-agent /var/service/mackerel-agent`'
