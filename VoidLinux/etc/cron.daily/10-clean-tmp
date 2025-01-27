@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+# Deletes files (except sockets) that have not been accessed for
+# more than 10 days in /tmp.
+find /tmp -type f -atime +10 -delete -exec echo Cleaning tmpdir: {} \;
+
+# Deletes empty directories that have not been changed for more than 10 days
+# in /tmp.
+find /tmp -type d -empty -mtime +10 -delete -exec echo Cleaning tmpdir: {} \;
