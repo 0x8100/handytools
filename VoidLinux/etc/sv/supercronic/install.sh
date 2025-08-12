@@ -22,7 +22,7 @@ trap rm_tmpfile EXIT
 trap 'trap - EXIT; rm_tmpfile; exit -1' INT PIPE TERM
 
 # Downlaod supercronic
-curl -o $tmpfile $SUPERCRONIC_URL
+curl -L -o $tmpfile $SUPERCRONIC_URL
 install -m 0755 -o root -g root $tmpfile /usr/local/bin/supercronic
 
 # Install default crontab and periodic script directories
