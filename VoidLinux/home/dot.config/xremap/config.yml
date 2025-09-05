@@ -1,0 +1,5 @@
+keymap:
+  - name: Muhenkan to Backspace
+    remap:
+      KEY_MUHENKAN: KEY_BACKSPACE
+
