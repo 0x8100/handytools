@@ -3,11 +3,11 @@ set -eu
 
 #  wait-a-line.sh
 #  --------------
-#  
+#
 # 標準入力（または指定されたファイル）の追記を監視し、指定された正規表現にマッチする行を待機します。
 # マッチする行が追記された場合、それを `[ OK ]` と共に表示して終了します。
 # 「ログが流れているか」という（ありがちな）確認作業に利用することができます。
-# 
+#
 # The latest code and license terms are available at:
 #   https://github.com/0x8100/handytools
 
@@ -26,6 +26,7 @@ function usage {
   echo "  -f FILE   Specify a file to monitor for new lines"
   echo ""
   echo 'This script listens for standard input (or file) and waits for a line that matches <regex>. If it matches, prints that line and exits.'
+  echo 'If no <regex> supplied, it waits for an arbitrary new line (.*).'
 }
 
 # コマンドライン引数解析
@@ -48,8 +49,7 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [[ -z "$REGEX" ]]; then
-  usage > /dev/stderr
-  exit 1
+  REGEX='.*'
 fi
 
 if [[ -n "$FILE" && ! -f "$FILE" ]]; then
