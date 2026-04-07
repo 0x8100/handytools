@@ -9,5 +9,5 @@ find /tmp -type f -atime +10 -delete -exec echo Cleaning tmpdir: {} \;
 find /tmp -type d -empty -mtime +10 -delete -exec echo Cleaning tmpdir: {} \;
 
 # Delete VSCode sockets that have not been accessed for more than 10 days
-find /tmp -type s -name 'vscode-ipc-*' -atime +10 -delete \
+find /tmp -type s -name 'vscode-*' -atime +10 -delete \
      -exec echo Cleaning tmpdir: {} \;
