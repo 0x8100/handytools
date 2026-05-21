@@ -1,0 +1,2 @@
+# example of additional flags
+OPTS="--logtostdout --cfgfile /home/linuxbrew/.linuxbrew/etc/et.cfg"
