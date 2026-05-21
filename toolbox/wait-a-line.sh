@@ -66,7 +66,8 @@ if [[ -n "$FILE" ]]; then
     if [[ "$LINE" =~ $REGEX ]]; then
       # マッチした場合、[wait] を消して [OK] を青で表示
       echo -en "\033[1A\033[2K" # カーソルを1行上に戻し、その行をクリア
-      echo -e "${BLUE}[ OK ]${RESET} $LINE"
+      echo -e "${BLUE}[ OK ]${RESET} found a line that matches '$REGEX'"
+      echo "$LINE"
       exit 0
     fi
   done
@@ -75,7 +76,8 @@ else
     if [[ "$LINE" =~ $REGEX ]]; then
       # マッチした場合、[wait] を消して [OK] を青で表示
       echo -en "\033[1A\033[2K" # カーソルを1行上に戻し、その行をクリア
-      echo -e "${BLUE}[ OK ]${RESET} $LINE"
+      echo -e "${BLUE}[ OK ]${RESET} found a line that matches '$REGEX'"
+      echo "$LINE"
       exit 0
     fi
   done
