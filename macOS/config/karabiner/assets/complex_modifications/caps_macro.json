@@ -1,0 +1,53 @@
+{
+    "title": "CapsLock Macros",
+    "rules": [
+	{
+	    "description": "CapsLock -> Fn+Control+F",
+	    "manipulators": [
+		{
+		    "type": "basic",
+		    "from": {
+			"key_code": "caps_lock"
+		    },
+		    "to": [
+			{
+			    "key_code": "f",
+			    "modifiers": [
+				"fn",
+				"left_control"
+			    ]
+			}
+		    ]
+		}
+	    ]
+	},
+	{
+	    "description": "Shift+CapsLock -> Fn+Control+C",
+	    "manipulators": [
+		{
+		    "type": "basic",
+		    "from": {
+			"key_code": "caps_lock",
+			"modifiers": {
+			    "mandatory": [
+				"shift"
+			    ],
+			    "optional": [
+				"any"
+			    ]
+			}
+		    },
+		    "to": [
+			{
+			    "key_code": "c",
+			    "modifiers": [
+				"fn",
+				"left_control"
+			    ]
+			}
+		    ]
+		}
+	    ]
+	}
+    ]
+}

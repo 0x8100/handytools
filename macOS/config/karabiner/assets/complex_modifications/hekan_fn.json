@@ -1,0 +1,55 @@
+{
+    "title": "Henkan/Kana hold for Fn",
+    "rules": [
+        {
+            "description": "Henkan tap=F13 hold=Fn",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "japanese_pc_xfer"
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "f13"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+		                        "apple_vendor_top_case_key_code": "keyboard_fn"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.to_if_alone_timeout_milliseconds": 1000,
+                        "basic.to_if_held_down_threshold_milliseconds": 1000
+                    }
+                }
+            ]
+        },
+        {
+            "description": "Kana tap=F13 hold=Fn",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "japanese_kana"
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "f13"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+	                          "apple_vendor_top_case_key_code": "keyboard_fn"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.to_if_alone_timeout_milliseconds": 1000,
+                        "basic.to_if_held_down_threshold_milliseconds": 1000
+                    }
+                }
+            ]
+        }
+    ]
+}
