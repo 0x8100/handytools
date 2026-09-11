@@ -34,15 +34,15 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 
 ## WTFPLの各条項を説明してください
 
-（省略）
+（訳注: 略）
 
-## もしプログラム名を変更できない場合においても、無制限（フリー）なライセンスと言えますか?
+## ソフトウェア名を変えることが許されないのに、無制限（フリー）なライセンスと言えるんですか?
 
-WTFPLではソフトウェア名を変えることも許されます。前章をもう一度読んでください。
+WTFPLではソフトウェア名を変えることも **許されます** 。前章をもう一度読んでください。
 
-## WTFPLは正当な（有効な）ライセンスですか?
+## WTFPLは実際に有効なライセンスですか?
 
-WTFPL の正当性が裁判所で検証されたことはありませんが、有効なライセンスとして広く受け入れられています。
+WTFPLの有効性が裁判所で検証されたことはありませんが、有効なライセンスとして広く受け入れられています。
 
 主なLinuxディストリビューション (Debian, Fedora, Arch, Gentoo, etc) は、 WTFPL version 1 もしくは 2 で
 ライセンスされたソフトウェアを同梱しています。Bradley Kuhn フリーソフトウェア財団事務局長は、
@@ -87,14 +87,14 @@ Fuckという言葉から護るべき神聖なものがあるなんて言って�
 
 Triple Fuck You.
 
-## 実際にWTFPLを使ったものは存在するのでしょうか?
+## 実際にWTFPLを使った著作物はありますか?
 
 このサイト上の WTFPL ライセンスは version 2 ですが、
 version 1 は [WindowMaker のアートワーク](http://cvs.windowmaker.org/co.php/wm/COPYING.WTFPL) を制作している Banlu Kemiyatorn 氏によって作成・利用されていました。
 
 また、このサイトの [showcase](https://www.wtfpl.net/showcase/) からWTFPLを利用した著作物を見ることができます。
 
-## WTFPLソフトウェアを利益目的で利用してもよいですか?
+## WTFPLソフトウェアを収益目的で利用してもよいですか?
 
 はい。
 
