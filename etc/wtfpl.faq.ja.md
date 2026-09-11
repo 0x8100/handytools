@@ -79,17 +79,15 @@ WTFPLとは fucking freedom ——ファッキンなほどの『自由』を示�
 
 自由という言葉は、何も芸術や科学的成果を人類で分かち合ったり、コピーしたり、改変するような行為だけを示すものじゃない。
 同性愛者である自由、結婚して滅茶苦茶なゲイセックスをする自由、体に刺青を彫り込む自由、神など存在しないと宣言する自由、避妊薬を飲む自由、中絶を行う自由、それらすべてが「自由」という言葉に含まれている。
-
-**同性愛者や無神論者であったがために人が死ぬ。**
-
-Fuckという言葉で穢れるものがあるなんて言ってくれるな。もしお前が WTFPL の `Fuck` が不快だの下品だのとのたまうなら、お前も、そんなお前の信念も、すべてFuckだ。
+**同性愛者や無神論者であったがために人が死ぬんだ。**
+Fuckから守るべき神聖など語ってくれるな。もしお前が WTFPL の `Fuck` が不快だの下品だのとのたまうなら、お前も、そんなお前の信念も、すべてFuckだ。
 
 Triple Fuck You.
 
 ## 実際にWTFPLを使った著作物はありますか?
 
-このサイト上の WTFPL ライセンスは version 2 ですが、
-version 1 は Banlu Kemiyatorn によって作成され、彼がいくつかの [WindowMaker のアートワーク](http://cvs.windowmaker.org/co.php/wm/COPYING.WTFPL) に使用していました。
+このサイト上の WTFPL ライセンスは version 2 ですが、WTFPL version 1 は Banlu Kemiyatorn によって作成され、
+彼がいくつかの [WindowMaker のアートワーク](https://github.com/window-maker/wmaker/blob/master/COPYING.WTFPL) に使用していました。
 
 また、このサイトの [showcase](https://www.wtfpl.net/showcase/) からWTFPLを利用した著作物を見ることができます。
 
