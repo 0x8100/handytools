@@ -7,12 +7,12 @@
 
 ## WTFPLを利用するにはどうすればよいでしょうか?
 
-**ステップ1** WTFPL の [全文](https://www.wtfpl.net/txt/copying) をダウンロードする（もしくはコピー&ペーストする）などであなたの著作物に添付します。
+**ステップ1** WTFPL の [全文](https://www.wtfpl.net/txt/copying) をダウンロードまたはコピー&ペーストし、あなたの著作物に同梱します。
 
 ライセンスファイルの一般的なファイル名は `COPYING` です。
-もし複数のライセンスファイルを含むなら、WTFPLのライセンスファイル名は `COPYING.WTFPL` とするのが妥当でしょう。
+もし複数のライセンスを採用しているなら、WTFPLのライセンスファイル名は `COPYING.WTFPL` とするのが妥当でしょう。
 
-**ステップ2** 著作物の著作権表示部分に、以下の文言を記載します。
+**ステップ2** 著作物の著作権表示に、以下の文言を追加します。
 
 ```
 Copyright © 2000 Your Name <your@address>
@@ -22,7 +22,7 @@ as published by Sam Hocevar. See the COPYING file for more details.
 ```
 
 もし現実的な問題として著作物に `COPYING` ファイルを同梱できないのであれば、上記のライセンス文を著作物に直接コピー&ペーストしてください。
-もしくは、以下のようにこのサイトへリンクすることでライセンスを示すこともできます。
+もしくは、以下のようにこのサイトへリンクすることもできます。
 
 ```
 Copyright © 2000 Your Name <your@address>
@@ -37,7 +37,7 @@ as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
 
 ## ソフトウェア名を変えることが許されないライセンスなんて、無制限（フリー）と呼べるでしょうか?
 
-WTFPLではソフトウェア名を変えることも **許されます** 。前章をもう一度読んでください。
+WTFPLではソフトウェア名を変えることも **許されます** 。前項をもう一度よく読んでください。
 
 ## WTFPLは実際に有効なライセンスですか?
 
@@ -45,7 +45,7 @@ WTFPLの有効性が裁判所で検証されたことはありませんが、有
 
 主なLinuxディストリビューション (Debian, Fedora, Arch, Gentoo, etc) は、 WTFPL version 1 もしくは 2 で
 ライセンスされたソフトウェアを同梱しています。
-[引用](http://lists.debian.org/debian-legal/2002/09/msg00032.html) によれば、Bradley Kuhn フリーソフトウェア財団事務局長は「FSFメンバーはWTFPLが正当なフリーソフトウェア・ライセンスであると同意した」と話しています。
+[この引用](http://lists.debian.org/debian-legal/2002/09/msg00032.html) によれば、Bradley Kuhn フリーソフトウェア財団事務局長は「FSFメンバーは、確かにWTFPLはフリーソフトウェア・ライセンスであると同意」したと話しています。
 
 ## なぜ無保証条項がないのですか?
 
@@ -65,7 +65,7 @@ WTFPL はコンピュータ・プログラムに限らず、アートワーク�
 ## このライセンスは本質的にパブリック・ドメインと同じではありませんか?
 
 残念ながらパブリック・ドメインの定義は管轄区域によって異なります。
-いくつかの地域においては、著作者の死後70年を経過していない著作物をパブリック・ドメインとするかは議論の余地があります。
+死後70年を経過していない（あるいは存命の）著作者が、自らの著作物をパブリック・ドメインにすることができるかどうかは、地域によって議論の余地があります。
 
 ## ライセンスの汚い言葉遣いを直せませんか? 不適切で、幼稚で、企業に相応しくない
 
@@ -89,7 +89,7 @@ Triple Fuck You.
 ## 実際にWTFPLを使った著作物はありますか?
 
 このサイト上の WTFPL ライセンスは version 2 ですが、
-version 1 は Banlu Kemiyatorn によって作成され、彼の [WindowMaker のアートワーク](http://cvs.windowmaker.org/co.php/wm/COPYING.WTFPL) が使用していました。
+version 1 は Banlu Kemiyatorn によって作成され、彼がいくつかの [WindowMaker のアートワーク](http://cvs.windowmaker.org/co.php/wm/COPYING.WTFPL) に使用していました。
 
 また、このサイトの [showcase](https://www.wtfpl.net/showcase/) からWTFPLを利用した著作物を見ることができます。
 
@@ -97,7 +97,7 @@ version 1 は Banlu Kemiyatorn によって作成され、彼の [WindowMaker �
 
 はい。
 
-## ところで、WTFPL著作物でこんなことをしたいたんだけど……
+## ところで、WTFPLの作品でこんなことをしたいたんだけど……
 
 もちろんかまいません。
 
@@ -112,5 +112,3 @@ version 1 は Banlu Kemiyatorn によって作成され、彼の [WindowMaker �
 ## フロリアンに何か好きなものなんてあるだろうか?
 
 それはない。
-
-（訳注: 詳細不詳。白雪姫の王子様のことか?）
